@@ -2,7 +2,7 @@ version: "3.9"
 services:
     tgbot:
         container_name: tgbot
-        image: ghcr.io/taosky/telegram-search-bot:latest
+        image: ghcr.io/sunafterrainwm/telegram-search-bot:latest
         restart: always
         volumes:
             - ./:/app/config
@@ -30,7 +30,7 @@ services:
 
     #  tgbot2:
     #   container_name: tgbot
-    #     image: ghcr.io/taosky/telegram-search-bot:latest
+    #     image: ghcr.io/sunafterrainwm/telegram-search-bot:latest
     #     restart: always
     #     volumes:
     #     ......
