@@ -10,5 +10,4 @@ robot_debug.py
 /.config.json.example
 /bot.db
 .history/
-config/
 .userbot_*
