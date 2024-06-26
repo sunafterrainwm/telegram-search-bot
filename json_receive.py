@@ -68,15 +68,12 @@ def main():
             continue
 
         sock.send(_("importing...").encode())
-        edited_id = (
-            int(group_id) if group_id.startswith("-100") else int("-100" + group_id)
-        )
 
-        print(edited_id)
+        print(group_id)
         with OpenableDBSession() as session:
-            insert_chat_or_do_nothing(session, edited_id, group_name)
+            insert_chat_or_do_nothing(session, group_id, group_name)
             success_count, fail_count, fail_messages = insert_messages(
-                session, edited_id, messages
+                session, group_id, messages
             )
 
         fail_text = ""
